@@ -24,5 +24,14 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-soehne), Arial, Helvetica, sans-serif;
+}
+
+.tag{
+    height: 52px;
+    width: 219px;
+    border-radius: 40px;
+    padding: 10px 40px;
+    background-color:#000000;
+    color: white
 }

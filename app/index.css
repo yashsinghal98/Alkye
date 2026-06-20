@@ -1,43 +1,123 @@
-main{
-    height: 100vh;
-    width: 100vw;
+main {
+    min-height: 100vh;
+    width: 100%;
 }
-.card-cont{
+
+.card-cont {
     display: flex;
     gap: 20px;
     overflow-x: auto;
     margin-top: 60px;
-    padding-left: 50px;
+    padding-left: 100px;
+    overflow-y: hidden;
 }
-.header-comp{
+
+.card-cont > * {
+    scroll-snap-align: start;
+}
+
+.header-comp {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 135px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
-.testIcon{
-    height: 59px;
-    width: 59px;
+
+.testIcon {
+    height: auto;
+    width: 100px;
     margin-bottom: 20px;
 }
-.test-cont{
+
+.test-cont {
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.title-cont h1{
+
+.title-cont h1 {
     font-size: 90px;
     line-height: 1;
     font-weight: 700;
     color: var(--test-title);
     text-align: center;
 }
-.title-cont span{
+
+.title-cont span {
     font-size: 24px;
     line-height: 1;
     font-weight: 400;
-    color: var(--test-sub)
+    color: var(--test-sub);
+}
+
+@media screen and (max-width: 1024px) {
+    .header-comp {
+        margin-top: 100px;
+    }
+
+    .title-cont h1 {
+        font-size: 72px;
+    }
+
+    .title-cont span {
+        font-size: 20px;
+    }
+
+    .card-cont {
+        gap: 16px;
+        padding-left: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        min-height: auto;
+    }
+
+    .header-comp {
+        margin-top: 80px;
+    }
+
+    .testIcon {
+        width: 80px;
+    }
+
+    .title-cont h1 {
+        font-size: 48px;
+        line-height: 1.05;
+    }
+
+    .title-cont span {
+        font-size: 18px;
+    }
+
+    .card-cont {
+        gap: 14px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-comp {
+        margin-top: 60px;
+    }
+
+    .title-cont h1 {
+        font-size: 36px;
+    }
+
+    .title-cont span {
+        font-size: 16px;
+    }
+
+    .card-cont {
+        gap: 12px;
+    }
 }

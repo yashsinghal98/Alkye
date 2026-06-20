@@ -2,6 +2,7 @@
 
 import { useParams } from 'next/navigation';
 import { useRespContext } from "../../_components/RespProvider";
+import './new.css';
 
 export default function SelectedPage() {
   const params = useParams();
@@ -17,9 +18,13 @@ export default function SelectedPage() {
   }
 
   return (
-    <section>
-      <img src={String(item.image_url)} alt={String(item.short_description)} />
-      <p>{String(item.short_description)}</p>
+    <section className='desc-page'>
+      <img src={String(item.image_url)} className='main-img' alt={String(item.short_description)} />
+      <div className='info-section'>
+        <span className='tag'>Photography</span>
+        <p className='meta-sum'>{String(item.short_description)}</p>
+        <p className='meta-sub'>{String( item.content)}</p>
+      </div>
     </section>
   );
 }

@@ -1,0 +1,60 @@
+.desc-page {
+    margin-top: 70px;
+}
+
+.main-img {
+    width: 100%;
+    max-width: 100%;
+    height: 1000px;
+    object-fit: cover;
+}
+
+.info-section {
+    width: 100%;
+    padding: 60px;
+}
+
+.meta-sum {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+    color: #000000;
+    margin-top: 24px;
+}
+
+.meta-sub {
+    margin-top: 24px;
+    font-family: var(--font-soehne), Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .desc-page {
+        margin-top: 40px;
+        padding: 0 16px;
+    }
+
+    .main-img {
+        height: 320px;
+    }
+
+    .info-section {
+        padding: 32px 16px;
+    }
+
+    .meta-sum {
+        font-size: 28px;
+        line-height: 1.25;
+        margin-top: 20px;
+    }
+
+    .meta-sub {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-top: 16px;
+    }
+}

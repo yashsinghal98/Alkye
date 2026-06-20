@@ -1,10 +1,27 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import TestIcon from '../Logo.png';
 import './index.css';
 import RespProvider from './_components/RespProvider';
+
+const testSoehne = localFont({
+  src: [
+    {
+      path: "../Fonts/Test web fonts (WOFF2)/test-soehne-buch.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../Fonts/Test web fonts (WOFF2)/test-soehne-buch-kursiv.woff2",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  variable: "--font-soehne",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${testSoehne.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <RespProvider>

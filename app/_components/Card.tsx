@@ -2,8 +2,6 @@
 
 import { useRouter } from 'next/navigation';
 import './Card.css';
-import Test from '../../test.png';
-import { useEffect } from 'react';
 
 export default function Card({ data }) {
     const router = useRouter();
@@ -13,7 +11,7 @@ export default function Card({ data }) {
             className='card'
             role='button'
             tabIndex={0}
-            style={{ backgroundImage: `url(${data.image_url})` }}
+            style={{ '--card-bg': `url(${data.image_url})` } as React.CSSProperties}
             onClick={() => router.push(`/products/${data.id}`)}
             onKeyDown={(event) => {
                 if (event.key === 'Enter' || event.key === ' ') {
