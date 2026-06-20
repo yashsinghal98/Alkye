@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import TestIcon from '../Logo.png';
+import './index.css';
+import RespProvider from './_components/RespProvider';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +31,18 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <RespProvider>
+          <section className="header-comp">
+            <Image className="testIcon" src={TestIcon} alt="test-icon" />
+            <div className="title-cont">
+              <h1>alkye</h1>
+              <span>The easiest test you will ever do</span>
+            </div>
+          </section>
+          {children}
+        </RespProvider>
+      </body>
     </html>
   );
 }

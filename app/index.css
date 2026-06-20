@@ -1,0 +1,43 @@
+main{
+    height: 100vh;
+    width: 100vw;
+}
+.card-cont{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    margin-top: 60px;
+    padding-left: 50px;
+}
+.header-comp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 135px;
+}
+.testIcon{
+    height: 59px;
+    width: 59px;
+    margin-bottom: 20px;
+}
+.test-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title-cont h1{
+    font-size: 90px;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--test-title);
+    text-align: center;
+}
+.title-cont span{
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 400;
+    color: var(--test-sub)
+}

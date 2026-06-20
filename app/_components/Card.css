@@ -1,0 +1,52 @@
+.card {
+    height: 800px;
+    min-width: 800px;
+    max-width: 800px;
+    padding: 95px 69px;
+    border-radius: 71px;
+    border: 1px solid black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.card:hover{
+    background-image: url('../../test.png');
+}
+.tag{
+    height: 52px;
+    width: 219px;
+    border-radius: 40px;
+    padding: 10px 40px;
+    background-color: var(--test-title);
+    color: white
+}
+.desc{
+    width: 45%;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        min-width: 411px;
+        max-width: 411px;
+        height: 561px;
+        padding: 32px 20px;
+        border-radius: 32px;
+        background-size: contain;
+    }
+
+    .card:hover {
+        background-image: none;
+    }
+
+    .tag {
+        width: auto;
+        padding: 10px 24px;
+    }
+
+    .desc {
+        width: 100%;
+        margin-top: 24px;
+    }
+}
+
